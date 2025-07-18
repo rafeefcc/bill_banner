@@ -38,6 +38,4 @@
     'license': 'LGPL-3',
     'images': ['bill_banner/static/description/icon.png'],
     'icon': 'bill_banner/static/description/icon.png',
-    'price': 11,
-    'currency': 'USD',
 }
