@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <menuitem id="bill_banner_menu_root" name="Bill Banner" sequence="10" groups="base.group_system" web_icon="bill_banner,static/description/icon.png"/>
+    <menuitem id="menu_notice_banner" name="Notices" parent="bill_banner_menu_root" action="action_notice_banner" groups="base.group_system"/>
+</odoo>

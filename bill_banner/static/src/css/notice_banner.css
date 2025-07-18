@@ -1,0 +1,81 @@
+.oe_notice_banner {
+    background-color: #D9EDF7; /* Light blue for visibility in both modes */
+    border: 1px solid #BCE8F1; /* Slightly darker border */
+    color: #31708F; /* Dark blue-gray for text */
+    padding: 12px 20px;
+    text-align: center;
+    position: sticky;
+    top: 0;
+    z-index: 1050;
+    margin: 0;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    font-weight: 500;
+    max-height: 50px; /* Adjust as needed to make it short */
+}
+
+.notice-message.scroll-text {
+    display: inline-block;
+    white-space: nowrap;
+    min-width: 100%; /* Ensure it's at least as wide as the container */
+    animation: marquee 20s linear infinite; /* Adjust duration as needed */
+}
+
+@keyframes marquee {
+    0% { transform: translateX(100%); }
+    100% { transform: translateX(-100%); }
+}
+
+.oe_notice_banner .btn-close {
+    position: absolute;
+    right: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    font-size: 18px;
+    cursor: pointer;
+    opacity: 0.7;
+}
+
+.oe_notice_banner .btn-close:hover {
+    opacity: 1;
+}
+
+.oe_notice_banner strong {
+    color: #31708F;
+}
+
+/* Animation for messages */
+.notice-message {
+    display: inline-block; /* Needed for transform animations */
+    animation-duration: 0.5s; /* Duration of the animation */
+    animation-fill-mode: forwards; /* Keep the end state of the animation */
+    font-weight: bold; /* Make the font bolder */
+    font-size: 1.1em; /* Slightly increase font size */
+}
+
+@keyframes fadeOut {
+    from { opacity: 1; }
+    to { opacity: 0; }
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+.notice-message.fade-out {
+    animation-name: fadeOut;
+}
+
+.notice-message.fade-in {
+    animation-name: fadeIn;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .oe_notice_banner {
+        padding: 10px 40px 10px 15px;
+        font-size: 14px;
+    }
+}

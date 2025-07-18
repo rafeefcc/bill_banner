@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <!-- Extend the main web layout to include the notice banner -->
+        <template id="web_layout_notice_banner" inherit_id="web.layout" name="Notice Banner Layout">
+            <xpath expr="//body" position="inside">
+                <div id="notice-banner-container"></div>
+            </xpath>
+        </template>
+    </data>
+</odoo>
